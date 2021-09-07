@@ -3,6 +3,10 @@ services:
 	app:
 	    build: app
 	    restart: always
+	    logging:
+	           driver: "json-file"
+	           options:
+		max-size:"1600m"
 	    
 	nginx:
 	    build: ngnix
